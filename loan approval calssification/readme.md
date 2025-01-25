@@ -70,9 +70,9 @@ The dataset is split into training and testing sets using **Stratified Shuffle S
 
 | Model                  | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 |------------------------|----------|-----------|--------|----------|---------|
-| Logistic Regression    | 89.6%    | 77.6%     | 75.1%  | 76.3%    | 0.95    |
-| Decision Tree          | 91.9%    | 90.9%     | 76.8%  | 83.3%    | 0.96    |
-| Random Forest          | 91.7%    | 91.6%     | 72.2%  | 80.8%    | 0.97    |
+| Logistic Regression    | 89.6%    | 78.3%     | 73.8%  | 76.0%    | 0.95    |
+| Decision Tree          | 91.9%    | 87.7%     | 73.9%  | 80.2%    | 0.96    |
+| Random Forest          | 91.7%    | 90.2%     | 70.5%  | 79.2%    | 0.97    |
 
 ### Observations:
 - **Decision Tree**: 
@@ -90,13 +90,18 @@ The dataset is split into training and testing sets using **Stratified Shuffle S
 ## Feature Importance Analysis
 
 - Top 5 features for **Decision Tree** and **Random Forest**:
-  - `loan_amnt`
-  - `credit_score`
+  - `previous_loan_default_on_file`
   - `loan_percent_income`
   - `loan_int_rate`
-  - `person_emp_exp`
+  - `person_income`
+  - `person_home_ownership`
 
 - Logistic Regression shows different feature importance due to linear separability assumptions.
+  - `loan_percent_income`
+  - `loan_int_rate`
+  - `person_homw_ownership`
+  - `person_age`
+  - `person_income`
 
 ---
 
